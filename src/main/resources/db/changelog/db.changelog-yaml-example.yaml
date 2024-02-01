@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id:  create-table-customers
+      author:  yesee
+      changes:
+        - createTable:
+            columns:
+            - column:
+                name:  id
+                type:  int
+                autoIncrement:  true
+                constraints:
+                    primaryKey:  true
+                    nullable:  false
+            - column:
+                name:  firstname
+                type:  varchar(50)
+            - column:
+                name:  lastname
+                type:  varchar(50)
+                constraints:
+                    nullable:  false
+            - column:
+                name:  state
+                type:  char(2)
+            tableName:  customers
+      tags:
+          - v1.0
+      # rollback:
+      #     - dropTable:
+      #         tableName: testTable
+  - changeSet:
+      id:  create-table-adminUsers
+      author:  yesee
+      changes:
+      - createTable:
+          columns:
+          - column:
+              name:  id
+              type:  int
+              autoIncrement:  true
+              constraints:
+                  primaryKey:  true
+                  nullable:  false
+          - column:
+              name:  firstname
+              type:  varchar(50)
+          - column:
+              name:  lastname
+              type:  varchar(50)
+              constraints:
+                  nullable:  false
+          - column:
+              name:  state
+              type:  char(2)
+          tableName:  adminUsers
+      tags:
+          - v1.1

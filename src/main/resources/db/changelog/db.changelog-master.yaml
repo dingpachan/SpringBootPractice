@@ -1,0 +1,7 @@
+databaseChangeLog:
+  # - includeAll:
+  #     path: db/changelog/migration/
+  - include:
+      file: db/changelog/db.changelog-yaml-example.yaml
+  # - include:
+  #     file: db/changelog/db.changelog-yaml-admin-user.yaml
